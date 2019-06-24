@@ -1,0 +1,239 @@
+[{
+    "tab": "Grundeinstellungen",
+    "key": "environment",
+    "label": "Modus",
+    "type": "dropdown",
+    "possibleValues": {
+        "LIVE": "Live",
+        "CONNECTOR_TEST": "Test"
+    },
+    "default": "CONNECTOR_TEST"
+},  {
+    "tab": "Grundeinstellungen",
+    "key": "security_sender",
+    "label": "Security Sender",
+    "type": "text",
+    "default": "ff8080813d910716013d939d698b05f7"
+},  {
+    "tab": "Grundeinstellungen",
+    "key": "user_login",
+    "label": "User Login",
+    "type": "text",
+    "default": "ff8080813d910716013d939d698b05f9"
+},  {
+    "tab": "Grundeinstellungen",
+    "key": "user_pwd",
+    "label": "User Password",
+    "type": "text",
+    "default": "7EGwhfnJ"
+}, 
+
+{
+    "tab": "Creditcard",
+    "key": "status_cc",
+    "label": "Aktivieren",
+    "type": "dropdown",
+    "possibleValues": {
+        "0": "Nein",
+        "1": "Ja"
+    },
+    "default": "0"
+},  {
+    "tab": "Creditcard",
+    "key": "name_cc",
+    "label": "Anzeigename",
+    "type": "text",
+    "default": "Kreditkarte"
+},  {
+    "tab": "Creditcard",
+    "key": "desc_cc",
+    "label": "Beschreibung",
+    "type": "text",
+    "default": ""
+},  {
+    "tab": "Creditcard",
+    "key": "channel_cc",
+    "label": "Channel",
+    "type": "text",
+    "default": "ff8080813d910716013d939d945b05fb"
+},  {
+    "tab": "Creditcard",
+    "key": "bookmode_cc",
+    "label": "Buchungsmodus",
+    "type": "dropdown",
+    "possibleValues": {
+        "DB": "Direkte Buchung",
+        "PA": "Reservierung"
+    },
+    "default": "DB"
+},  
+
+{
+    "tab": "Debitcard",
+    "key": "status_dc",
+    "label": "Aktivieren",
+    "type": "dropdown",
+    "possibleValues": {
+        "0": "Nein",
+        "1": "Ja"
+    },
+    "default": "0"
+},  {
+    "tab": "Debitcard",
+    "key": "name_dc",
+    "label": "Anzeigename",
+    "type": "text",
+    "default": "Debitkarte"
+},  {
+    "tab": "Debitcard",
+    "key": "desc_dc",
+    "label": "Beschreibung",
+    "type": "text",
+    "default": ""
+},  {
+    "tab": "Debitcard",
+    "key": "channel_dc",
+    "label": "Channel",
+    "type": "text",
+    "default": "ff8080813f5bb63e013f7c0872191886"
+},  {
+    "tab": "Debitcard",
+    "key": "bookmode_dc",
+    "label": "Buchungsmodus",
+    "type": "dropdown",
+    "possibleValues": {
+        "DB": "Direkte Buchung",
+        "PA": "Reservierung"
+    },
+    "default": "DB"
+},
+
+{
+    "tab": "Sofort-Banking",
+    "key": "status_otsu",
+    "label": "Aktivieren",
+    "type": "dropdown",
+    "possibleValues": {
+        "0": "Nein",
+        "1": "Ja"
+    },
+    "default": "0"
+},  {
+    "tab": "Sofort-Banking",
+    "key": "name_otsu",
+    "label": "Anzeigename",
+    "type": "text",
+    "default": "Sofortüberweisung"
+},  {
+    "tab": "Sofort-Banking",
+    "key": "desc_otsu",
+    "label": "Beschreibung",
+    "type": "text",
+    "default": ""
+},  {
+    "tab": "Sofort-Banking",
+    "key": "channel_otsu",
+    "label": "Channel",
+    "type": "text",
+    "default": "ff8080813d910716013d93ae81a50681"
+},
+
+{
+    "tab": "Giropay",
+    "key": "status_otgp",
+    "label": "Aktivieren",
+    "type": "dropdown",
+    "possibleValues": {
+        "0": "Nein",
+        "1": "Ja"
+    },
+    "default": "0"
+},  {
+    "tab": "Giropay",
+    "key": "name_otgp",
+    "label": "Anzeigename",
+    "type": "text",
+    "default": "Giropay"
+},  {
+    "tab": "Giropay",
+    "key": "desc_otgp",
+    "label": "Beschreibung",
+    "type": "text",
+    "default": ""
+},  {
+    "tab": "Giropay",
+    "key": "channel_otgp",
+    "label": "Channel",
+    "type": "text",
+    "default": "ff8080813fce1fc6013fd28ff4ae070f"
+},
+
+{
+    "tab": "iDeal",
+    "key": "status_otidl",
+    "label": "Aktivieren",
+    "type": "dropdown",
+    "possibleValues": {
+        "0": "Nein",
+        "1": "Ja"
+    },
+    "default": "0"
+},  {
+    "tab": "iDeal",
+    "key": "name_otidl",
+    "label": "Anzeigename",
+    "type": "text",
+    "default": "iDeal"
+},  {
+    "tab": "iDeal",
+    "key": "desc_otidl",
+    "label": "Beschreibung",
+    "type": "text",
+    "default": ""
+},  {
+    "tab": "iDeal",
+    "key": "channel_otidl",
+    "label": "Channel",
+    "type": "text",
+    "default": "ff8080813f5bac85013f76235b981b79"
+},
+
+{
+    "tab": "PayPal",
+    "key": "status_pp",
+    "label": "Aktivieren",
+    "type": "dropdown",
+    "possibleValues": {
+        "0": "Nein",
+        "1": "Ja"
+    },
+    "default": "0"
+},  {
+    "tab": "PayPal",
+    "key": "name_pp",
+    "label": "Anzeigename",
+    "type": "text",
+    "default": "PayPal"
+},  {
+    "tab": "PayPal",
+    "key": "desc_pp",
+    "label": "Beschreibung",
+    "type": "text",
+    "default": ""
+},  {
+    "tab": "PayPal",
+    "key": "channel_pp",
+    "label": "Channel",
+    "type": "text",
+    "default": "ff8080813fbdd5ce013fbe5c74810070"
+},  {
+    "tab": "PayPal",
+    "key": "bookmode_pp",
+    "label": "Buchungsmodus",
+    "type": "dropdown",
+    "possibleValues": {
+        "DB": "Direkte Buchung",
+        "PA": "Reservierung"
+    },
+    "default": "DB"
+}]

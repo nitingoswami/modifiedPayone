@@ -1,0 +1,32 @@
+{
+    "name": "Masterpayment",
+    "marketplaceName": {"de":"Masterpayment Zahlungsmodul","en":"Masterpayment Paymentmodule"},
+    "namespace": "Mapa",
+    "type": "payment",  
+    "version": "1.1.1",
+    "license": "Copyright by Masterpayment AG",
+    "isClosedSource": "true",
+    "pluginIcon": "icon_plugin_xs.png",
+    "price": 0.00,
+    "description": "Masterpayment plugin for plentymarkets",
+    "shortDescription": {"de":"Masterpayment plugin für plentymarkets","en":"Masterpayment plugin for plentymarkets"},
+    "categories":["3519"],
+    "keywords": ["masterpayment", "official", "plentymarkets", "payment"],
+    "author": "Masterpayment AG",
+    "authorIcon": "icon_author_xs.png",
+    "email": "tobias.eilers@masterpayment.com",
+    "phone": "+49 8151 18759-0",
+    "serviceProvider": "Mapa\\Providers\\MapaServiceProvider",
+    "containers": [],
+    "dataProviders"         :
+    [
+        {
+            "key"           :"Mapa\\Containers\\MapaErrorContainer",
+            "name"          :"Error Messages",
+            "description"   :"Display a error message in checkout"
+        }
+    ],
+    "javaScriptFiles": [],
+    "require": [],
+    "dependencies":[]
+}
