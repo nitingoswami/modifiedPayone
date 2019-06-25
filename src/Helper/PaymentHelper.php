@@ -109,7 +109,6 @@ class PaymentHelper
     public function getPaymentMethod($paymethod)
     {
         $paymentMethods = $this->paymentMethodRepository->allForPlugin('mapa');
-      
  
         if( !is_null($paymentMethods) )
         {
