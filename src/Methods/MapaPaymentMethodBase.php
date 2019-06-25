@@ -106,12 +106,10 @@ class MapaPaymentMethodBase extends PaymentMethodService
      * @return string
      */
     public function getIcon()
-    {  
-         $app = pluginApp(Application::class);
-         $icon = $app->getUrlPath('masterpayment').'/images/'.$this->icons[$this->type];
+    {
+        $icon = 'plenty/ui-plugin/production/masterpayment/images/'.$this->icons[$this->type];
 
-         return $icon;
-        
+        return $icon;
     }
 
     /**
