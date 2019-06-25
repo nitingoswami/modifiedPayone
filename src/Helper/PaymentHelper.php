@@ -109,6 +109,7 @@ class PaymentHelper
     public function getPaymentMethod($paymethod)
     {
         $paymentMethods = $this->paymentMethodRepository->allForPlugin('mapa');
+      echo "<pre>"; print_R($paymentMethods); die;
  
         if( !is_null($paymentMethods) )
         {
