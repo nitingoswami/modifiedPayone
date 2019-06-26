@@ -353,12 +353,10 @@ class PaymentService
       
       $iframeURL = 'about:blank';
       if ($res['result'] == 'ACK'){
-        $iframeURL = $res['url'];
-        //$content =  print_r($requestParams, TRUE);
-        ob_start();
-        var_dump($requestParams);
-         $content = ob_get_clean();
-        //$content = '<center><iframe src="'.$iframeURL.'" frameborder="0" width="80%" height="500"></iframe></center>';
+        $newData = http_build_query($requestParams);
+        $iframeURL = $res['url']."&".$newData;
+        
+        $content = '<center><iframe src="'.$iframeURL.'" frameborder="0" width="80%" height="500"></iframe></center>';
       } else {
         $content = '<h3 style="color: red">ERROR: '.$res['all']['PROCESSING.RETURN'].'</h3>';
       }
