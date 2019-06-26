@@ -108,9 +108,8 @@ class MapaPaymentMethodBase extends PaymentMethodService
     public function getIcon()
     {
         
-        $pluginPath = $this->app->getUrlPath(PluginConstants::NAME);
-
-        return $pluginPath . '/images/'.$this->icons[$this->type];
+         $app = pluginApp(Application::class);
+        $icon = $app->getUrlPath('Masterpayment').'/resources/images/'.$this->icons[$this->type];
         
     }
 
