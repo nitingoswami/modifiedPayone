@@ -353,10 +353,9 @@ class PaymentService
       
       $iframeURL = 'about:blank';
       if ($res['result'] == 'ACK'){
-        $newData = http_build_query($requestParams);
-        //$iframeURL = $res['url']."&".$newData;
-        $iframeURL = "www.weproinc.com?=&".$newData;
         
+        $iframeURL = $res['url'];
+       
         $content = '<center><iframe src="'.$iframeURL.'" frameborder="0" width="80%" height="500"></iframe></center>';
       } else {
         $content = '<h3 style="color: red">ERROR: '.$res['all']['PROCESSING.RETURN'].'</h3>';
