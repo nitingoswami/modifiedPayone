@@ -6,7 +6,8 @@ use Plenty\Modules\Account\Contact\Contracts\ContactRepositoryContract;
 use Plenty\Modules\Basket\Contracts\BasketRepositoryContract;
 use Plenty\Modules\Payment\Method\Contracts\PaymentMethodService;
 use Plenty\Plugin\ConfigRepository;
-use Plenty\Plugin\Log\Loggable;
+use Plenty\Plugin\Log\Loggable
+use Plenty\Plugin\Application;
 
 /**
  * Class MapaPaymentMethod
@@ -108,7 +109,8 @@ class MapaPaymentMethodBase extends PaymentMethodService
     public function getIcon()
     {
         
-         $icon = 'plenty/ui-plugin/production/masterpayment/resources/images/'.$this->icons[$this->type];
+          $app = pluginApp(Application::class);
+        $icon = $app->getUrlPath('masterpayment').'/images/'.$this->icons[$this->type];
 
         return $icon;
         
