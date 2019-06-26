@@ -353,7 +353,6 @@ class PaymentService
       
       $iframeURL = 'about:blank';
       if ($res['result'] == 'ACK'){
-        
         $iframeURL = $res['url'];
        
         $content = '<center><iframe src="'.$iframeURL.'" frameborder="0" width="80%" height="500"></iframe></center>';
