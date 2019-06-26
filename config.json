@@ -13,19 +13,19 @@
     "key": "security_sender",
     "label": "Security Sender",
     "type": "text",
-    "default": "8a8394c742b8c6b70142be0360611180"
+    "default": "ff8080813d910716013d939d698b05f7"
 },  {
     "tab": "Grundeinstellungen",
     "key": "user_login",
     "label": "User Login",
     "type": "text",
-    "default": "8a8394c742b8c6b70142be0360621184"
+    "default": "ff8080813d910716013d939d698b05f9"
 },  {
     "tab": "Grundeinstellungen",
     "key": "user_pwd",
     "label": "User Password",
     "type": "text",
-    "default": "zgrg5peR"
+    "default": "7EGwhfnJ"
 }, 
 
 {
@@ -55,7 +55,7 @@
     "key": "channel_cc",
     "label": "Channel",
     "type": "text",
-    "default": "8acda4cb6274f63a01628a9c066b311e"
+    "default": "ff8080813d910716013d939d945b05fb"
 },  {
     "tab": "Creditcard",
     "key": "bookmode_cc",
