@@ -93,9 +93,9 @@ class MapaResponseController extends Controller
     {
       $this->sessionStorage->setSessionValue('lastPS', $_GET['ps']);
       $this->sessionStorage->setSessionValue('lastPR', $_GET['pr']);
-        return $this->response->json(['success' => false, 'message' => $_GET['pr'], 'data' => $_GET]);
+        
       
-      //return $this->response->redirectTo('checkout');
+      return $this->response->redirectTo('checkout');
     }
     
     public function checkoutSuccess()
