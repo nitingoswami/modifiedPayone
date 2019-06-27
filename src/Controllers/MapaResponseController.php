@@ -77,7 +77,7 @@ class MapaResponseController extends Controller
                                 PaymentHelper $paymentHelper,
                                 SessionStorageService $sessionStorage,
                                 OrderRepositoryContract $orderRepo,
-                                MapaErrorContainer  $errorContainer,
+                                MapaErrorContainer $errorContainer,
                                 ConfigRepository $config)
     {
         $this->request            = $request;
@@ -87,7 +87,7 @@ class MapaResponseController extends Controller
         $this->orderRepo          = $orderRepo;
         $this->sessionStorage     = $sessionStorage;
         $this->config             = $config;
-        $this->errorContainer    = $errorContainer;
+        $this->errorContainer     = $errorContainer;
     }
 
     public function getStyle()
