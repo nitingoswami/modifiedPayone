@@ -78,7 +78,7 @@ class MapaResponseController extends Controller
                                 PaymentHelper $paymentHelper,
                                 SessionStorageService $sessionStorage,
                                 OrderRepositoryContract $orderRepo,
-                               
+                                MapaErrorContainer $errorContainer,
                                 ConfigRepository $config)
     {
         $this->request            = $request;
@@ -88,6 +88,7 @@ class MapaResponseController extends Controller
         $this->orderRepo          = $orderRepo;
         $this->sessionStorage     = $sessionStorage;
         $this->config             = $config;
+        $this->errorContainer     = $errorContainer;
        
     }
 
@@ -101,7 +102,7 @@ class MapaResponseController extends Controller
       $this->sessionStorage->setSessionValue('lastPS', $_GET['ps']);
       $this->sessionStorage->setSessionValue('lastPR', $_GET['pr']);
         
-      //$this->errorContainer->call();
+      $this->errorContainer->call();
       //return $this->response->redirectTo('checkout');
     }
     
