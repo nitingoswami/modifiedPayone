@@ -102,7 +102,7 @@ class MapaResponseController extends Controller
       $this->sessionStorage->setSessionValue('lastPS', $_GET['ps']);
       $this->sessionStorage->setSessionValue('lastPR', $_GET['pr']);
         
-      $this->errorContainer->call();
+      return $this->errorContainer->call();
       //return $this->response->redirectTo('checkout');
     }
     
