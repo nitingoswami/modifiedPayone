@@ -16,8 +16,6 @@ use Plenty\Plugin\Templates\Twig;
 use Mapa\Helper\PaymentHelper;
 use Mapa\Services\SessionStorageService;
 use Plenty\Plugin\Log\Loggable;
-use Mapa\Containers\MapaErrorContainer;
-use IO\Services\NotificationService;
 
 
 class MapaResponseController extends Controller
@@ -60,7 +58,7 @@ class MapaResponseController extends Controller
     private $config;
     
     
-     private $errorContainer;
+     
     
   
 
@@ -79,8 +77,7 @@ class MapaResponseController extends Controller
                                 PaymentRepositoryContract $paymentRepository,
                                 PaymentHelper $paymentHelper,
                                 SessionStorageService $sessionStorage,
-                                OrderRepositoryContract $orderRepo,
-                                MapaErrorContainer $errorContainer,
+                                OrderRepositoryContract $orderRepo,                               
                                 ConfigRepository $config)
     {
         $this->request            = $request;
@@ -90,7 +87,7 @@ class MapaResponseController extends Controller
         $this->orderRepo          = $orderRepo;
         $this->sessionStorage     = $sessionStorage;
         $this->config             = $config;
-        $this->errorContainer     = $errorContainer;
+      
        
     }
 
@@ -99,11 +96,11 @@ class MapaResponseController extends Controller
       return 'body{background-color: #f00}';
     }
     
-    public function checkoutFailure(NotificationService $notificationService)
+    public function checkoutFailure(Twig $twig)
     {
       $this->sessionStorage->setSessionValue('lastPS', $_GET['ps']);
       $this->sessionStorage->setSessionValue('lastPR', $_GET['pr']);
-      //$notificationService->error($_GET['pr']);
+     
       return $this->response->redirectTo('checkout');
     }
     
