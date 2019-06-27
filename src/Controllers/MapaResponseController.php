@@ -13,11 +13,8 @@ use Plenty\Modules\Payment\Models\Payment;
 use Plenty\Modules\Order\Models\Order;
 use Plenty\Plugin\ConfigRepository;
 use Plenty\Plugin\Templates\Twig;
-
-
 use Mapa\Helper\PaymentHelper;
 use Mapa\Services\SessionStorageService;
-use Mapa\Containers\MapaErrorContainer;
 use Plenty\Plugin\Log\Loggable;
 
 class MapaResponseController extends Controller
@@ -59,7 +56,7 @@ class MapaResponseController extends Controller
      */
     private $config;
     
-    private $errorContainer;
+  
 
     /**
      * PaymentNotificationController constructor.
@@ -77,7 +74,7 @@ class MapaResponseController extends Controller
                                 PaymentHelper $paymentHelper,
                                 SessionStorageService $sessionStorage,
                                 OrderRepositoryContract $orderRepo,
-                                MapaErrorContainer $errorContainer,
+                               
                                 ConfigRepository $config)
     {
         $this->request            = $request;
@@ -87,7 +84,7 @@ class MapaResponseController extends Controller
         $this->orderRepo          = $orderRepo;
         $this->sessionStorage     = $sessionStorage;
         $this->config             = $config;
-        $this->errorContainer     = $errorContainer;
+       
     }
 
     public function getStyle()
@@ -100,7 +97,7 @@ class MapaResponseController extends Controller
       $this->sessionStorage->setSessionValue('lastPS', $_GET['ps']);
       $this->sessionStorage->setSessionValue('lastPR', $_GET['pr']);
         
-      $this->errorContainer->call();
+      //$this->errorContainer->call();
       //return $this->response->redirectTo('checkout');
     }
     
