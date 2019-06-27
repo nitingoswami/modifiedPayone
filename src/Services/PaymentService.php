@@ -299,10 +299,10 @@ class PaymentService
           "street"      => $requestParams['shippingAddress']['street'].' '.$requestParams['shippingAddress']['houseNumber'],
           "zip"         => $requestParams['shippingAddress']['postalCode'],
           "city"        => $requestParams['shippingAddress']['town'],
-          "state"       => '',
-          "country"     => $country['isoCode2'],
+          "state"       => 'Punjab',
+          "country"     => 'IN',
           "phone"       => $requestParams['shippingAddress']['phone'],
-          "mobile"      => '',
+          "mobile"      => '9780446281',
           "email"       => $requestParams['shippingAddress']['email'],
           "ip"          => $_SERVER['REMOTE_ADDR'],
         );
