@@ -17,6 +17,8 @@ use Mapa\Helper\PaymentHelper;
 use Mapa\Services\SessionStorageService;
 use Plenty\Plugin\Log\Loggable;
 use Mapa\Containers\MapaErrorContainer;
+use IO\Services\NotificationService;
+
 
 class MapaResponseController extends Controller
 {
@@ -97,11 +99,11 @@ class MapaResponseController extends Controller
       return 'body{background-color: #f00}';
     }
     
-    public function checkoutFailure(Twig $twig)
+    public function checkoutFailure(NotificationService $notificationService, Twig $twig, SessionStorageService $sessionStorage)
     {
       $this->sessionStorage->setSessionValue('lastPS', $_GET['ps']);
       $this->sessionStorage->setSessionValue('lastPR', $_GET['pr']);
-      print("nitin");  
+      $notificationService->error($this->errorContainer->call($twig, $sessionStorage));
       return $this->response->redirectTo('checkout');
     }
     
