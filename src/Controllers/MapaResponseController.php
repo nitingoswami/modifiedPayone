@@ -58,6 +58,8 @@ class MapaResponseController extends Controller
      * @var ConfigRepository
      */
     private $config;
+    
+    private $errorContainer;
 
     /**
      * PaymentNotificationController constructor.
@@ -85,7 +87,7 @@ class MapaResponseController extends Controller
         $this->orderRepo          = $orderRepo;
         $this->sessionStorage     = $sessionStorage;
         $this->config             = $config;
-        $this->errorContainer    = $errorContainer
+        $this->errorContainer    = $errorContainer;
     }
 
     public function getStyle()
