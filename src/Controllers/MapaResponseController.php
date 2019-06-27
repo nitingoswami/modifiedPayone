@@ -103,7 +103,7 @@ class MapaResponseController extends Controller
     {
       $this->sessionStorage->setSessionValue('lastPS', $_GET['ps']);
       $this->sessionStorage->setSessionValue('lastPR', $_GET['pr']);
-      $notificationService->error($_GET['pr']);
+      //$notificationService->error($_GET['pr']);
       return $this->response->redirectTo('checkout');
     }
     
