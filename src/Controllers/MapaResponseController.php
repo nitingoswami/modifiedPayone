@@ -16,6 +16,7 @@ use Plenty\Plugin\Templates\Twig;
 use Mapa\Helper\PaymentHelper;
 use Mapa\Services\SessionStorageService;
 use Plenty\Plugin\Log\Loggable;
+use Mapa\Containers\MapaErrorContainer;
 
 class MapaResponseController extends Controller
 {
@@ -55,6 +56,9 @@ class MapaResponseController extends Controller
      * @var ConfigRepository
      */
     private $config;
+    
+    
+     private $errorContainer;
     
   
 
