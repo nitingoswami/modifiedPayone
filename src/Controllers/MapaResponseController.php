@@ -102,7 +102,14 @@ class MapaResponseController extends Controller
       $this->sessionStorage->setSessionValue('lastPS', $_GET['ps']);
       $this->sessionStorage->setSessionValue('lastPR', $_GET['pr']);
         
-       return  $this->errorContainer->call();
+       $status = $this->sessionStorage->getSessionValue('lastPS');
+        $result = $this->sessionStorage->getSessionValue('lastPR');
+        if (!empty($status)){
+          $errorMSG = $status.': '.$result;
+          $this->sessionStorage->setSessionValue('lastPS', NULL);
+          $this->sessionStorage->setSessionValue('lastPR', NULL);
+          return $twig->render('Masterpayment::content.error', ['errorText' => $errorMSG]);
+        } 
       //return $this->response->redirectTo('checkout');
     }
     
