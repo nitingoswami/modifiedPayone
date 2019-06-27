@@ -99,11 +99,11 @@ class MapaResponseController extends Controller
       return 'body{background-color: #f00}';
     }
     
-    public function checkoutFailure(NotificationService $notificationService, Twig $twig, SessionStorageService $sessionStorage)
+    public function checkoutFailure(NotificationService $notificationService)
     {
       $this->sessionStorage->setSessionValue('lastPS', $_GET['ps']);
       $this->sessionStorage->setSessionValue('lastPR', $_GET['pr']);
-      $notificationService->error($this->errorContainer->call($twig, $sessionStorage));
+      $notificationService->error($_GET['pr']);
       return $this->response->redirectTo('checkout');
     }
     
