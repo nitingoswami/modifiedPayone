@@ -3,7 +3,7 @@
     "marketplaceName": {"de":"Masterpayment Zahlungsmodul","en":"Masterpayment Paymentmodule"},
     "namespace": "Mapa",
     "type": "payment",  
-    "version": "1.1.1",
+    "version": "1.2.1",
     "license": "Copyright by Masterpayment AG",
     "isClosedSource": "true",
     "pluginIcon": "icon_plugin_xs.png",
