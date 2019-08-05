@@ -287,8 +287,8 @@ class PaymentService
           'USER_PWD'            => $requestParams['USER.PASSWORD'],
           'TRANSACTION_CHANNEL' => $this->config->get('Masterpayment.channel_'.$selectedPaymethod),
           'TRANSACTION_MODE'    => $requestParams['TRANSACTION.MODE'],
-          'STYLE_URL'           => $domain.'/mapa/style',
-          'RESPONSE_URL'        => $domain.'/mapa/response',
+          'STYLE_URL'           => $domain.'/payment/mapa/style',
+          'RESPONSE_URL'        => $domain.'/payment/mapa/response',
         );
         $conf['STYLE_URL'] = 'https://mp-gate.com/rs/v1/css/default_style.css'; // default style
         $userData = array(
@@ -311,8 +311,8 @@ class PaymentService
         $requestParams['REQUEST'] = $payCore->prepareData($orderId, $amount, $currency, $conf, $userData);
         $requestParams['REQUEST']['CRITERION.MOPID'] = $mopID;
         $requestParams['REQUEST']['CRITERION.PM'] = $selectedPaymethod;
-        $requestParams['REQUEST']['CRITERION.FAILURL'] = $domain.'/mapa/checkout_failure';
-        $requestParams['REQUEST']['CRITERION.SUCCESSURL'] = $domain.'/mapa/checkout_success';
+        $requestParams['REQUEST']['CRITERION.FAILURL'] = $domain.'/payment/mapa/checkout_failure';
+        $requestParams['REQUEST']['CRITERION.SUCCESSURL'] = $domain.'/payment/mapa/checkout_success';
         $requestParams['REQUEST']['CRITERION.PLACEURL'] = $domain.'/place-order';
         $requestParams['REQUEST']['CRITERION.RESPONSEURL'] = $conf['RESPONSE_URL'];
         $i=1;
