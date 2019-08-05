@@ -16,9 +16,9 @@ class MapaRouteServiceProvider extends RouteServiceProvider
      */
     public function map(Router $router)
     {
-        $router->get('mapa/style',            'Mapa\Controllers\MapaResponseController@getStyle');
-        $router->post('mapa/response',        'Mapa\Controllers\MapaResponseController@handleResponse');
-        $router->get('mapa/checkout_failure', 'Mapa\Controllers\MapaResponseController@checkoutFailure');
-        $router->get('mapa/checkout_success', 'Mapa\Controllers\MapaResponseController@checkoutSuccess');
+        $router->get('payment/mapa/style',            'Mapa\Controllers\MapaResponseController@getStyle');
+        $router->post('payment/mapa/response',        'Mapa\Controllers\MapaResponseController@handleResponse');
+        $router->get('payment/mapa/checkout_failure', 'Mapa\Controllers\MapaResponseController@checkoutFailure');
+        $router->get('payment/mapa/checkout_success', 'Mapa\Controllers\MapaResponseController@checkoutSuccess');
     }
 }
