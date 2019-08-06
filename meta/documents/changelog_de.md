@@ -1,3 +1,10 @@
+# Veröffentlichung 1.2.1 - 6.08.2019
+
+#### Änderung
+
+- Zahlungsweg festgelegt
+
+
 # Veröffentlichung 1.1.6 - 23.03.2018
 
 #### Änderung
