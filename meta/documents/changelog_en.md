@@ -1,3 +1,9 @@
+# Release 1.2.1 - 6.08.2019
+
+#### Changes
+
+- payment routes fixed
+
 # Release 1.1.6 - 23.03.2018
 
 #### Changes
